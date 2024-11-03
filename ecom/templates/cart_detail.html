@@ -1,0 +1,9 @@
+<h2>Your Cart</h2>
+
+<ul>
+    {% for item in items %}
+        <li>{{ item.product.productname }} - Quantity: {{ item.quantity }} - Price: ${{ item.product.price }}</li>
+    {% endfor %}
+</ul>
+
+<p>Total: ${{ cart.get_total_price }}</p>

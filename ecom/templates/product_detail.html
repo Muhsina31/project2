@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ product.productname }}</h2>
+  <img src="{{ product.image.url }}" alt="{{ product.productname }}">
+  <p>Price: ${{ product.price }}</p>
+  <p>{{ product.details }}</p>
+  <a href="{% url 'edit_product' product.pk %}" class="btn btn-warning">Edit</a>
+{% endblock %}
